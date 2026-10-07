@@ -80,7 +80,7 @@ The ESP32-P4 GPIOs are 3.3 V only, and the Grove port supplies 5 V. A sensor mod
 
 ## Setup
 
-1. Mosquitto: install, copy `mosquitto/mosquitto.conf`, restart the service, open ports 1883 and 9001 in the laptop firewall.
+1. Mosquitto: install, copy `mosquitto/mosquitto.conf`, restart the service, open ports 1883 and 9001 in the laptop firewall. For macOS, copy mosquitto.conf to `$HOMEBREW_PREFIX/etc/mosquitto/`.
 2. Arduino IDE: board "M5Tab5" (m5stack esp32 core 3.2.x), PSRAM enabled. Libraries: M5Unified, M5GFX, PubSubClient, ArduinoJson 7. In each `config.h`, set the Wi-Fi, the laptop IP, and the station / machine number, then flash.
 3. Node-RED: install `@flowfuse/node-red-dashboard` from the palette, import `cplab_flows.json`, deploy. Dashboard at `http://<laptop>:1880/dashboard`. To keep the breakdown history across restarts, add to `settings.js`:
    ```js
